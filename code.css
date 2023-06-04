@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.7);
+}
+.container .left_side{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+
+.profileText{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255,255,0.2);
+}
+
+.profileText .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+} 
+
+
+.profileText .imgBx img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+.contactInfo{
+    padding-top: 40px;
+}
+
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactInfo ul{
+    position: relative;
+
+}
+
+
+.right_side .about h4 {
+    padding-bottom: 10px;
+    
+}
+.contactInfo ul li{
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactInfo.education li{
+    margin-bottom: 15px;
+}
+
+.contactInfo.education h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.contactInfo.education h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4 {
+    color: #cecbcb;
+    font-weight: 300;
+}
+
+.contactInfo.lang .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(26, 25, 25);
+    display: block;
+    margin-top: 5px;
+}
+
+.contactInfo.lang .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+
+}
+
+
+
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.title2{
+    color:#003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+p{
+    color: #333;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+
+.about .box .int{
+    color: rgb(34, 32, 32);
+    font-size: 20px;
+    
+}
+
+.about .box .int li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+.container .right_side{
+    position: relative;
+    background: #fff;
+    padding: 40px; 
+}
+
+
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.skills .box h4{
+    text-transform: uppercase;
+    color: rgb(9, 4, 4);
+    font-weight: 550; 
+}
+
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(26, 25, 25);
+    display: block;
+    margin-top: 5px;
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.interest ul li{
+    list-style: none;
+    color: #121111;
+    font-weight: 300;
+}
+
+.interest ul li .fa{
+    color: #03a9f4;
+    font-size: 15px;
+    width: 20px;
+}
+
+
+@media (max-width: 1000px) {
+    .container{
+
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+.about .box{
+    flex-direction: column;
+}
+.interest ul{
+    grid-template-columns: repeat(1, 1fr);
+}
+.skills .box{
+    grid-template-columns: repeat(1, 1fr);
+}
+}
